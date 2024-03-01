@@ -1,21 +1,26 @@
-<script src="js/hls.js"></script>
-<script src="js/DPlayer.min.js"></script>
- <div id="dplayer"></div>
+<script src="https://c-a-p-120.github.io/playervideo/js/hls.js"></script>
+<script src="https://c-a-p-120.github.io/playervideo/js/DPlayer.min.js"></script>
+<div id="dplayer" style="width:100%; height:100%;"></div>
 	<script>
 const dp = new DPlayer({
     container: document.getElementById('dplayer'),
-    autoplay: true,	
+    autoplay: true,
+  live: true,
+ 
     video: {
+	    
         quality: [
-            {
-                name: 'estacion mix tv',
+             {
+                name: 'ESTACION MIX TV',
                 url: 'https://rpn3.bozztv.com/ssh101/ssh101/estacionmixtv/playlist.m3u8',
                 type: 'hls',
             },
+            
         ],
         defaultQuality: 0,
         pic: 'fondo-logo.png',
-        thumbnails: 'https://v2.ssh101.com/images2/SSH101-logo.png',
+        thumbnails: 'thumbnails.jpg',
     },
 });
+
 	</script>

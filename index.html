@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>TITULO</title>
-    
-		<script src="js/hls.js"></script>
-		<script src="js/DPlayer.min.js"></script>
-        
-      
-    </head>
-    <body>
-
-	    <div id="dplayer"></div>
+<script src="js/hls.js"></script>
+<script src="js/DPlayer.min.js"></script>
+ <div id="dplayer"></div>
 	<script>
-
 const dp = new DPlayer({
     container: document.getElementById('dplayer'),
     autoplay: true,	
     video: {
-	    
         quality: [
             {
-                name: 'estacion mix',
+                name: 'estacion mix tv',
                 url: 'https://rpn3.bozztv.com/ssh101/ssh101/estacionmixtv/playlist.m3u8',
                 type: 'hls',
             },
@@ -33,8 +18,4 @@ const dp = new DPlayer({
         thumbnails: 'https://v2.ssh101.com/images2/SSH101-logo.png',
     },
 });
-
 	</script>
-       
-    </body>
-</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>estacion mix tv</title>
+    
+		<script src="js/hls.js"></script>
+		<script src="js/DPlayer.min.js"></script>
+        
+        <style>
+            body {                
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+
+	    <div id="dplayer"> style="width:100%; height:100%;"></div>
+	<script>
+
+const dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    autoplay: true,
+    chromecast: true,
+    live: true,
+    video: {
+	    
+        quality: [
+            {
+               name: 'estacion mix tv',
+                url: 'https://rpn3.bozztv.com/ssh101/ssh101/estacionmixtv/playlist.m3u8',
+                type: 'hls',
+            },
+        ],
+        defaultQuality: 0,
+         pic: 'image.png',
+        thumbnails: 'thumbnails.jpg',
+    },
+});
+
+	</script>
+       
+    </body>
+</html>
